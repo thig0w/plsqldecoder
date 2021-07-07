@@ -3,10 +3,9 @@ python:
 - '3.9'
 cache: pip
 install:
-- pip install -r requirements.txt
-- pip install .
+- pip install .[dev]
 script:
-- python -c "pass"
+- tox
 deploy:
   provider: heroku
   api_key:
