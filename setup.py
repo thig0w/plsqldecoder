@@ -12,6 +12,7 @@ with open(ver_path) as ver_file:
 
 with open("requirements.txt") as f:
     requirements = f.read().splitlines()
+requirements.remove(".")
 
 DESCRIPTION = "Simple decoder for pl/sql developer password hash"
 APP_ROOT = Path(__file__).parent
