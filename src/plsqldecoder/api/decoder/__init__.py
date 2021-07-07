@@ -1,2 +1,3 @@
-__all__ = ['endpoints']
+# -*- coding: utf-8 -*-
+__all__ = ["endpoints"]
 from . import endpoints

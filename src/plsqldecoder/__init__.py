@@ -11,12 +11,14 @@ __version__ = "0.1.1"
 
 def create_app(config_name):
     config = get_config(config_name)
-    app = FastAPI(title=config.project_name,
-                  docs_url=config.openapi_url,
-                  redoc_url=config.redoc_url,
-                  openapi_tags=[],
-                  debug=config.debug,
-                  version=__version__)
+    app = FastAPI(
+        title=config.project_name,
+        docs_url=config.openapi_url,
+        redoc_url=config.redoc_url,
+        openapi_tags=[],
+        debug=config.debug,
+        version=__version__,
+    )
 
     @app.get("/", include_in_schema=False)
     def redirect_to_docs() -> RedirectResponse:

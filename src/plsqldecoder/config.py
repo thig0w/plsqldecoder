@@ -14,6 +14,7 @@ HERE = Path(__file__).parent
 # SQLITE_TEST = "sqlite:///" + str(HERE / "disponible_test.db")
 # SQLITE_PROD = "sqlite:///" + str(HERE / "disponible_prod.db")
 
+
 class BaseAPISettings(BaseSettings):
     api_v1_route: str = "/api/v1"
     project_name: str = "plsqldecoder"
@@ -22,25 +23,28 @@ class BaseAPISettings(BaseSettings):
     debug: bool = False
 
 
-
 class DevAPISettings(BaseAPISettings):
     """Development configuration."""
+
     debug: bool = True
 
 
 class TestAPISettings(BaseAPISettings):
     """Test configuration."""
+
     debug: bool = True
 
 
 class ProdAPISettings(BaseAPISettings):
     """Production configuration."""
+
     debug: bool = False
 
 
 ENV_CONFIG_DICT = dict(
     development=DevAPISettings, testing=TestAPISettings, production=ProdAPISettings
 )
+
 
 @lru_cache()
 def get_config(config_name):
