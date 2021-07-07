@@ -11,6 +11,8 @@ deploy:
   provider: heroku
   api_key:
     secure: vAmi1SMS7E6mzmgYq1V/ly5JCF6/AmdErfC0A1yGzASMQX0V156eVWYwGWlOcYtXAOskLB3Lfc2G+ExVmdYMK4PZt0K/yt6y019Rj8kSfJ88LpgOHP5K/i/TaQcGHIFAwioy37GTiqHYr5w2L7JLij5m/EzmGmEMF46reaYgimmB/aJPFOaFgPIUcw0lLEHsLrF63cpWuUnNH//1wPrERJqonGJ0iZUuvdzE69mZ99WTjPlvPb+5OXLWI9jDmX8lFCCp1JiI9iAzqlB23tvvie9spMnqQngS0mGsNYyZq/o/m3d4gCRulkolxEk7ov3ibMy/wXdrq2A9mP/D4kmbE5FbNARewHXeaVHg9ULpiSsgKsvX96kwx4vXjtA4WIM3+EGOlNRDBZ/2ToXUGGrbfPSFzpCD7woeSB/trKqU5LJvgimjWnCYGt81ABtr8F7ZfJ0p8F3esNR2/765vWpV4Sdwq6y5/JrbCbUigNEfAqdTo36F8eWmrJWTS0FCN+IV4lkKk4C8RQYDf1E63Pffq7E3RjhH/EAyK5f76Bxj+B+Rh4vt0hUfL8XkBOuWkPgxRrNHsil0RKkQozzPkPtrYft4v/LtFg0+S7b82q7z/JeMLrueoTAJ/XUAvPvI1uD2xiPTzqvBmN/6ioezCkMeTmbEFL+0cwwGt6QKq0PaBBo=
+  run:
+    - pip install .
   app:
     master: plsqldecoder
 #    hml: rtlog-validator-hml
