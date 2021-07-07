@@ -3,7 +3,7 @@ python:
 - '3.9'
 cache: pip
 install:
-- pip install -r requirements.txt
+- pip install .
 script:
 - python -c "pass"
 deploy:
