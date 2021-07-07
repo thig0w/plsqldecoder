@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 """Config settings for for development, testing and production environments."""
-import os
-import secrets
-from pathlib import Path
 from functools import lru_cache
+from pathlib import Path
 
 from pydantic import BaseSettings
 

@@ -4,9 +4,7 @@ from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 from plsqldecoder.api import decoder
 from plsqldecoder.config import get_config
-
-# TODO: use versioneer
-__version__ = "0.1.1"
+from plsqldecoder._version import __version__
 
 
 def create_app(config_name):

@@ -1,9 +1,14 @@
 # -*- coding: utf-8 -*-
 """Installation script for disponible_api application."""
+from distutils.util import convert_path
 from pathlib import Path
 
 from setuptools import setup, find_packages
-from plsqldecoder import __version__
+
+main_ns = {}
+ver_path = convert_path("src/plsqldecoder/_version.py")
+with open(ver_path) as ver_file:
+    exec(ver_file.read(), main_ns)
 
 with open("requirements.txt") as f:
     requirements = f.read().splitlines()
@@ -40,7 +45,7 @@ setup(
     description=DESCRIPTION,
     long_description=README,
     long_description_content_type="text/markdown",
-    version=plsqldecoder.__version__,
+    version=main_ns["__version__"],
     author=AUTHOR,
     author_email=AUTHOR_EMAIL,
     maintainer=AUTHOR,
